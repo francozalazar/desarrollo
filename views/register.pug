@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi' crossorigin='anonymous')
+        link(rel='stylesheet' href='css/main.css')
+        title Register
+    body.bg-dark
+        main.container.text-white
+            section.row.justify-content-center.mb-4
+                a.btn.btn-danger.m-4.col-2(href="/login") Ir a Login
+                h2.text-center.mb-4 Formulario de registro
+                form#enviarProducto.col-6.d-flex.flex-column.align-items-center.justify-content-center.border.rounded.py-4(action='/register' method='POST')
+                    .mb-3
+                        label.form-label.text-center.d-block(for='email') Email
+                        input#nombreProducto.w-100.px-4.form-control(required='' type='text' placeholder='Ingrese su email...' name='email')
+                    .mb-3
+                        label.form-label.text-center.d-block(for='password') Contraseña
+                        input#nombreProducto.w-100.px-4.form-control(required='' type='password' placeholder='Ingrese su contraseña...' name='password')
+                    input.btn.btn-danger(type='submit' value='Enviar')
+                
